@@ -1,4 +1,5 @@
 import React from 'react'
+import './Anime.css'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
@@ -23,7 +24,6 @@ const Anime = () => {
               <h5 className="card-title">{val.name}</h5>
               <p className='card-text'>{val.personal.sex}</p>
               <p className="card-text">{val.personal.birthdate}</p>
-              <Link to='/'>Go somewhere</Link>
             </div>
           </div>
         )
@@ -35,9 +35,9 @@ const Anime = () => {
   }
 
   return (
-    <div>
-      <h1>{data}</h1>
-      {/* <button onClick={getAnime}>Get Anime</button> */}
+    <div className="anime-container">
+      <h1>Naruto Characters</h1>
+      <div className="grid">{data}</div>
     </div>
   )
 }
